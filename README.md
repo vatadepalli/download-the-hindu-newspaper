@@ -1,2 +1,2 @@
-# download-the-hindu-newspaper
-A simple python and selenium script to download "The Hindu" newspaper
+# The Hindu Downloader
+A simple python and selenium based script to download "The Hindu" newspaper.
