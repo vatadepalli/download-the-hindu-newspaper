@@ -77,6 +77,15 @@ WebDriverWait(driver, 10).until(
     ).send_keys(password)
 driver.find_element(By.CSS_SELECTOR, 'body > app-main > app-widget > screen-layout > main > current-screen > div > screen-login > p:nth-child(8) > button > span > t').click()
 
+# switch edition
+WebDriverWait(driver, 10).until(
+    EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#liEdition"))
+)[0].click()
+
+WebDriverWait(driver, 10).until(
+    EC.presence_of_all_elements_located((By.CSS_SELECTOR, "[editionname|=Hyderabad]"))
+)[0].click()
+
 # download edition
 download_button = WebDriverWait(driver, 10).until(
     EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#edition_download"))
